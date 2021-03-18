@@ -1,0 +1,168 @@
+.main {
+    font-family: Montserrat;
+    font-size: 5rem;
+    background-color: #000000;
+    height: 100vh;
+    color: #dadada;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    background-color: #14051c;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    height: 5rem;
+    transition: height .2s;
+}
+
+.name {
+    display: flex;
+    flex-direction: row;;
+    color: #fff;
+    font-weight: 900;
+    font-family: "RobotoMono";
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin: 0rem 0rem 0rem 5rem;
+}
+
+.selections {
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    font-weight: 800;
+    align-items: stretch;
+    user-select: none;
+    letter-spacing: 0.5rem;
+
+    &_selection {
+        position: relative;
+        display: flex;
+        padding: 0rem 3rem 0rem 3rem;
+        transition: background-color .2s;
+        align-items: center;
+
+        &_selected {
+            position: relative;
+            display: flex;
+            padding: 0rem 3rem 0rem 3rem;
+            transition: background-color .2s;
+            align-items: center;
+            
+            .selections_selection_container {
+                display: flex;
+                position: relative;
+                align-items: center;
+                justify-self: center;
+    
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 100%;
+                    height: 0.5rem;
+                    top: 100%;
+                    left: 0;
+                    transition: transform 0.3s;
+                    transform: scaleX(1);
+                    transform-origin: left;
+                    border-radius: 200rem;
+                    background-color: #cc00ff;
+                    filter: drop-shadow(0rem 0rem .3rem #cc00ff90)
+                            drop-shadow(0rem 0rem .6rem #dc4fff7b)
+                            drop-shadow(0rem 0rem .9rem #e177fc88);                            
+                }                
+            }
+
+        }        
+
+        &_container {
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-self: center;
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 0.5rem;
+                top: 100%;
+                left: 0;
+                transition: transform 0.3s;
+                transform: scaleX(0);
+                transform-origin: left;
+                border-radius: 200rem;
+                background-color: #cc00ff;
+                filter: drop-shadow(0rem 0rem .3rem #cc00ff90)
+                        drop-shadow(0rem 0rem .6rem #dc4fff7b)
+                        drop-shadow(0rem 0rem .9rem #e177fc88);                            
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:hover &_container::after {  
+            transform: scaleX(0.5);
+        }            
+    }
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    font-weight: 600;
+    align-items: stretch;
+    user-select: none;
+
+    &_item {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        justify-items: center;
+        width: 10rem;
+        transition: filter .3s;
+
+        svg {
+            fill: #fff;
+            width: 100%;
+            height: 85%;
+        
+        }
+        
+        margin: 0rem 1rem 0rem 1rem;
+
+        &:hover {
+            filter: drop-shadow(0rem 0rem .2rem #ffffff90)
+                    drop-shadow(0rem 0rem .4rem #d3d3d37b)
+                    drop-shadow(0rem 0rem .6rem #bababa88);      
+        }        
+    }
+
+    
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    margin: 0rem 25rem 0rem 25rem;
+    color: #fff;
+
+    &_containerHorz {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &_containerVert {
+        display: flex;
+        flex-direction: column;
+    }
+}
